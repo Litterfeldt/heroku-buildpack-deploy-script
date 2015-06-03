@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ -f $1/config/heroku_deploy.sh ]; then
+  echo "Deploy script"
+  exit 0
+else
+  echo "no config/heroku_deploy.sh file"
+  exit 1
+fi

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+set -e
+
+function indent() {
+  c='s/^/       /'
+  case $(uname) in
+    Darwin) sed -l "$c";;
+    *)      sed -u "$c";;
+  esac
+}
+
+unset GIT_DIR
+
+sh $1/config/heroku_deploy.sh
+if [ ! $? -eq 0 ]; then
+  echo "Script failed"
+  exit 1
+fi
+
+if [ -e $1/last_pack_release.out ]; then
+  echo "Using release configuration from last framework ($framework)."
+fi
