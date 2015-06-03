@@ -13,7 +13,7 @@ To use this buildpack we recommend looking into using heroku buildpack mulit
 
 Then add this line to your `.buildpacks` file:
 
-`https://github.com/Litterfeldt/heroku-buildpack-multi.git` 
+`https://github.com/Litterfeldt/heroku-buildpack-deploy-script`
 
 From here you will need to create a `config/heroku_deploy.sh` file which contains the shell scripts you want to run.
 
