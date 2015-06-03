@@ -17,6 +17,8 @@ Then add this line to your `.buildpacks` file:
 
 From here you will need to create a `config/heroku_deploy.sh` file which contains the shell scripts you want to run.
 
+Your app folder is passed in as an argument to the shellscript and can be accessed through `$1`
+
 ## License
 
 MIT
